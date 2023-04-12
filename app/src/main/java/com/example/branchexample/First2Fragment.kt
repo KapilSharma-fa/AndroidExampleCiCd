@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.doOnTextChanged
 import androidx.navigation.fragment.findNavController
 import com.example.branchexample.databinding.FragmentFirst2Binding
 
@@ -27,13 +28,16 @@ class First2Fragment : Fragment() {
         _binding = FragmentFirst2Binding.inflate(inflater, container, false)
         return binding.root
 
-    }
 
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_First2Fragment_to_Second2Fragment)
+        }
+        binding.editText1.doOnTextChanged { text, start, before, count ->
+            binding.textviewFirst.text=text
         }
     }
 
