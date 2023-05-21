@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">branchExample</string>
-    <string name="hello_first_fragment">First Fragment</string>
+    <string name="hello_first_fragment">This is test for commit 1</string>
     <string name="title_activity_main">Main Activity</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
